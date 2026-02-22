@@ -1,3 +1,12 @@
+3.0.0 2026-xx-xx
+* removed deprecated stuff and cleaned up API
+* dropped hardsid support
+* dropped resid emulation
+* add new lightweigth sid emulation based on cRSID by Mihály Horváth
+* moved residfp engine to an external library
+
+
+
 2.16.1 2026-02-15
 * Fixed MinGW build issues
 * Fixed warnings in USBSID builder
