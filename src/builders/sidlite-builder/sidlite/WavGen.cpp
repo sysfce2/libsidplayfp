@@ -160,7 +160,7 @@ wg_output_t WavGen::clock(ADSR *adsr)
     {
         unsigned char *ChannelPtr = &(regs[Channel*7]);
 
-        auto combinedWF = [&](cw_array_t WFarray, unsigned short oscval)
+        auto combinedWF = [&](const cw_array_t &WFarray, unsigned short oscval)
         {
             constexpr int COMBINEDWF_SAMPLE_RESOLUTION = 12; // bits
             constexpr int COMBINEDWF_FILT_RESOLUTION = 16; // bits

@@ -32,7 +32,7 @@ void EventScheduler::reset()
     currentTime = 0;
 }
 
-void EventScheduler::cancel(Event &event)
+void EventScheduler::cancel(const Event &event)
 {
     Event **scan = &firstEvent;
 
@@ -47,7 +47,7 @@ void EventScheduler::cancel(Event &event)
     }
 }
 
-bool EventScheduler::isPending(Event &event) const
+bool EventScheduler::isPending(const Event &event) const
 {
     Event *scan = firstEvent;
     while (scan != nullptr)

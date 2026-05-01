@@ -45,7 +45,7 @@ private:
     const PLA &pla;
 
 public:
-    DisconnectedBusBank(PLA &pla) :
+    DisconnectedBusBank(const PLA &pla) :
         pla(pla)
     {}
 

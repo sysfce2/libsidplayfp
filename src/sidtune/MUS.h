@@ -39,8 +39,8 @@ private:
 private:
     bool mergeParts(buffer_t& musBuf, buffer_t& strBuf);
 
-    void tryLoad(buffer_t& musBuf,
-                    buffer_t& strBuf,
+    void tryLoad(const buffer_t& musBuf,
+                    const buffer_t& strBuf,
                     uint_least32_t fileOffset,
                     uint_least32_t voice3Index,
                     bool init);

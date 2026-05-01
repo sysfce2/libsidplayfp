@@ -192,8 +192,8 @@ SidTuneBase* MUS::load(buffer_t& musBuf,
     return tune.release();
 }
 
-void MUS::tryLoad(buffer_t& musBuf,
-                    buffer_t& strBuf,
+void MUS::tryLoad(const buffer_t& musBuf,
+                    const buffer_t& strBuf,
                     uint_least32_t fileOffset,
                     uint_least32_t voice3Index,
                     bool init)
