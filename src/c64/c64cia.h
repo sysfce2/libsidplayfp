@@ -66,7 +66,9 @@ protected:
 public:
     c64cia1(c64env &env) :
         MOS652X(env.scheduler()),
-        m_env(env) {}
+        m_env(env) {
+            reset();
+        }
 
     void poke(uint_least16_t address, uint8_t value) override
     {
@@ -117,7 +119,9 @@ protected:
 public:
     c64cia2(c64env &env) :
         MOS652X(env.scheduler()),
-        m_env(env) {}
+        m_env(env) {
+            reset();
+        }
 
     void poke(uint_least16_t address, uint8_t value) override
     {

@@ -132,7 +132,8 @@ MOS652X::MOS652X(EventScheduler &scheduler) :
     serialPort(scheduler, *this),
     bTickEvent("CIA B counts A", *this, &MOS652X::bTick)
 {
-    reset();
+    // reset is virtual, must call from subclasses
+    //reset();
 }
 
 void MOS652X::handleSerialPort()
