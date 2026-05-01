@@ -67,7 +67,7 @@ public:
     void model(SidConfig::sid_model_t model, bool digiboost) override;
 
     // Specific to residfp
-    void filter(bool enable) { m_sid.enableFilter(enable); }
+    void enableFilter(bool enable) { m_sid.enableFilter(enable); }
 
     void filter6581Curve(double filterCurve) { m_sid.setFilter6581Curve(filterCurve); }
 
