@@ -366,7 +366,7 @@ wg_output_t WavGen::clock(ADSR *adsr)
         {
             FilterInput += (swave * Envelope) / ENVELOPE_MAGNITUDE_DIV;
         }
-        else if (LIKELY(Channel!=3 || !(VolumeBand & OFF3_BITVAL)))
+        else if (LIKELY(Channel!=2 || !(VolumeBand & OFF3_BITVAL)))
         {
             NonFiltered += (swave * Envelope) / ENVELOPE_MAGNITUDE_DIV;
         }
