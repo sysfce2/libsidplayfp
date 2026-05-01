@@ -46,7 +46,7 @@ public:
     SID();
     void reset();
     void write(int addr, int value);
-    int read(int addr);
+    int read(int addr) const;
     int clock(unsigned int cycles, short* buf);
 
     void setChipModel(model_t model);

@@ -42,7 +42,7 @@ private:
     int m_tdiff;
 
 private:
-    int reldiff(unsigned char s);
+    int reldiff(unsigned char s) const;
 
     /**
      * Relocate segment.

@@ -155,7 +155,7 @@ public:
      *
      * @return true if different
      */
-    bool compare(const SidConfig &config);
+    bool compare(const SidConfig &config) const;
 
 public:
     SidConfig();

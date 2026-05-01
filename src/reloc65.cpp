@@ -137,7 +137,7 @@ bool reloc65::reloc(unsigned char **buf, int *fsize)
     return true;
 }
 
-int reloc65::reldiff(unsigned char s)
+int reloc65::reldiff(unsigned char s) const
 {
     return s==2 ? m_tdiff : 0;
 }

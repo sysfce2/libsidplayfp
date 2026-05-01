@@ -37,7 +37,7 @@ private:
     uint_least16_t musDataLen;
 
 private:
-    bool mergeParts(buffer_t& musBuf, buffer_t& strBuf);
+    bool mergeParts(buffer_t& musBuf, buffer_t& strBuf) const;
 
     void tryLoad(const buffer_t& musBuf,
                     const buffer_t& strBuf,
@@ -48,7 +48,7 @@ private:
 protected:
     MUS() {}
 
-    void installPlayer(sidmemory& mem);
+    void installPlayer(sidmemory& mem) const;
 
     void setPlayerAddress();
 

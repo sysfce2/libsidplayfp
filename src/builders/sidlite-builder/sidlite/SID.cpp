@@ -88,7 +88,7 @@ void SID::write(int addr, int value)
     regs[addr] = value;
 }
 
-int SID::read(int addr)
+int SID::read(int addr) const
 {
     switch (addr)
     {

@@ -162,7 +162,7 @@ void MOS652X::reset()
     eventScheduler.cancel(bTickEvent);
 }
 
-uint8_t MOS652X::adjustDataPort(uint8_t data)
+uint8_t MOS652X::adjustDataPort(uint8_t data) const
 {
     if (regs[CRA] & 0x02)
     {

@@ -60,7 +60,7 @@ protected:
     /**
      * Return value from memory address.
      */
-    inline uint8_t getVal(uint_least16_t address) { return rom[address & (N-1)]; }
+    inline uint8_t getVal(uint_least16_t address) const { return rom[address & (N-1)]; }
     inline uint_least16_t getVal16(uint_least16_t address)
     {
         return endian_little16(getPtr(address));
