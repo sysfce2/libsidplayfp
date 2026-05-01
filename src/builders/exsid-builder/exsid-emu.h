@@ -42,8 +42,6 @@ private:
     static unsigned int sid;
     void * exsid;
 
-    bool m_status;
-
     bool readflag;
 
     uint8_t busValue;
@@ -72,8 +70,6 @@ public:
     void clock() override;
 
     void model(SidConfig::sid_model_t model, bool digiboost) override;
-
-    void filter(bool) {}
 
     void sampling(float systemclock, float freq,
         SidConfig::sampling_method_t method) override;
