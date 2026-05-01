@@ -48,7 +48,7 @@ private:
     uint8_t mc[SPRITES];
 
 public:
-    Sprites(uint8_t regs[0x40]) :
+    explicit Sprites(uint8_t regs[0x40]) :
         enable(regs[0x15]),
         y_expansion(regs[0x17]) {}
 

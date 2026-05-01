@@ -50,7 +50,7 @@ class loadError
 private:
     const char* m_msg;
 public:
-    loadError(const char* msg) : m_msg(msg) {}
+    explicit loadError(const char* msg) : m_msg(msg) {}
     const char* message() const { return m_msg; }
 };
 

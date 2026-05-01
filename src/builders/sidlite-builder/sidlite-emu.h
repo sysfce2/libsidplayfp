@@ -47,7 +47,7 @@ public:
     static const char* getCredits();
 
 public:
-    SIDLiteEmu(sidbuilder *builder);
+    explicit SIDLiteEmu(sidbuilder *builder);
     ~SIDLiteEmu() override;
 
     bool getStatus() const { return m_status; }

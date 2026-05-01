@@ -47,7 +47,7 @@ public:
     static const char* getCredits();
 
 public:
-    reSIDfpEmu(sidbuilder *builder);
+    explicit reSIDfpEmu(sidbuilder *builder);
     ~reSIDfpEmu() override;
 
     bool getStatus() const { return m_status; }

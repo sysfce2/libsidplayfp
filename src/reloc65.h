@@ -66,7 +66,7 @@ public:
     /**
      * @param addr address of the segment to relocate
      */
-    reloc65(int addr);
+    explicit reloc65(int addr);
 
     /**
      * Do the relocation.

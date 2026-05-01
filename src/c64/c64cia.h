@@ -64,7 +64,7 @@ protected:
     }
 
 public:
-    c64cia1(c64env &env) :
+    explicit c64cia1(c64env &env) :
         MOS652X(env.scheduler()),
         m_env(env) {
             reset();
@@ -117,7 +117,7 @@ protected:
     }
 
 public:
-    c64cia2(c64env &env) :
+    explicit c64cia2(c64env &env) :
         MOS652X(env.scheduler()),
         m_env(env) {
             reset();

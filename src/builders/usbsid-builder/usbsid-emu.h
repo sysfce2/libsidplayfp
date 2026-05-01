@@ -41,7 +41,7 @@ public:
     static const char* getCredits();
 
 public:
-    USBSID(sidbuilder *builder);
+    explicit USBSID(sidbuilder *builder);
     ~USBSID() override;
 
     /* static variables required due to

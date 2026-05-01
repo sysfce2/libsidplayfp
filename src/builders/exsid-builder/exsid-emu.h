@@ -55,7 +55,7 @@ public:
     static const char* getCredits();
 
 public:
-    exSID(sidbuilder *builder);
+    explicit exSID(sidbuilder *builder);
     ~exSID() override;
 
     bool getStatus() const { return m_status; }
