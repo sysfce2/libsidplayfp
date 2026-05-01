@@ -304,7 +304,7 @@ wg_output_t WavGen::clock(const ADSR *adsr)
                 if (LIKELY(!s->getRealSIDmode() || (PrevSounDemonDigiWF[Channel] <= 0)))
                 {
                     int Tmp = *PhaseAccuPtr ^ (UNLIKELY(WF&RING_BITVAL) ? RingSourceMSB : 0);
-                    WavGenOut = (Tmp ^ (Tmp&PHASEACCU_MSB_BITVAL ? PHASEACCU_MAX : 0)) >> (CRSID_WAVE_SHIFTS-1); // 11
+                    WavGenOut = (Tmp ^ ((Tmp&PHASEACCU_MSB_BITVAL) ? PHASEACCU_MAX : 0)) >> (CRSID_WAVE_SHIFTS-1); // 11
                 }
                 else
                 {
