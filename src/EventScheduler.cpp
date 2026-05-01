@@ -49,7 +49,7 @@ void EventScheduler::cancel(const Event &event)
 
 bool EventScheduler::isPending(const Event &event) const
 {
-    Event *scan = firstEvent;
+    const Event *scan = firstEvent;
     while (scan != nullptr)
     {
         if (&event == scan)

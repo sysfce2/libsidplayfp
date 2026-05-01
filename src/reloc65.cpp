@@ -38,7 +38,7 @@ const unsigned char o65hdr[] = {1, 0, 'o', '6', '5'};
  * @param buffer
  * @param idx
  */
-inline int getWord(unsigned char *buffer, int idx)
+inline int getWord(const unsigned char *buffer, int idx)
 {
     return buffer[idx] | (buffer[idx+1] << 8);
 }
@@ -61,7 +61,7 @@ inline void setWord(unsigned char *buffer, int idx, int value)
  *
  * @param buf
  */
-inline int read_options(unsigned char *buf)
+inline int read_options(const unsigned char *buf)
 {
     int l = 0;
 

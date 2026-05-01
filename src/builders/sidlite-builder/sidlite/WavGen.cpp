@@ -108,13 +108,13 @@ static const unsigned char ADSR_DAC_6581[] =
     0xED,0xEF,0xF0,0xF2,0xF2,0xF4,0xF4,0xF6,0xF6,0xF8,0xF9,0xFA,0xFB,0xFC,0xFD,0xFF
 };
 
-static inline unsigned short getCombinedPW(unsigned char* channelptr)
+static inline unsigned short getCombinedPW(const unsigned char* channelptr)
 {
     // PW=000..FFF (range for combined-waveform lookup) from SID-register (000..FFF)
     return ((channelptr[3]&0xF) << 8) | channelptr[2];
 }
 
-static inline unsigned short getPW(unsigned char* channelptr)
+static inline unsigned short getPW(const unsigned char* channelptr)
 {
     // PW=0000..FFF0 from SID-register (000..FFF)
     return getCombinedPW(channelptr) << 4;
@@ -145,7 +145,7 @@ constexpr unsigned int NOISE_MASK =
     |    0x01
 );
 
-wg_output_t WavGen::clock(ADSR *adsr)
+wg_output_t WavGen::clock(const ADSR *adsr)
 {
     // Waveform-generator (phase accumulator and waveform-selector)
 

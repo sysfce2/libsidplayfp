@@ -162,7 +162,7 @@ private:
         0xFFF3, 0xE500, // IOBASE
     };
 
-    void fill(uint_least16_t address, uint8_t data[5])
+    void fill(uint_least16_t address, const uint8_t data[5])
     {
         std::memcpy(getPtr(address), data, 5);
     }
