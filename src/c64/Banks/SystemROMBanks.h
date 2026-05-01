@@ -48,6 +48,8 @@ protected:
     uint8_t rom[N];
 
 protected:
+    ~romBank() = default;
+
     /**
      * Set value at memory address.
      */
@@ -75,7 +77,7 @@ public:
     /**
      * Copy content from source buffer.
      */
-    void set(const uint8_t* source) { if (source != nullptr) std::memcpy(rom, source, N); }
+    virtual void set(const uint8_t* source) { if (source != nullptr) std::memcpy(rom, source, N); }
 
     /**
      * Writing to ROM is a no-op.
@@ -168,7 +170,7 @@ private:
     }
 
 public:
-    void set(const uint8_t* kernal)
+    void set(const uint8_t* kernal) override
     {
         romBank<0x2000>::set(kernal);
 
@@ -247,7 +249,7 @@ private:
     uint8_t subTune[11];
 
 public:
-    void set(const uint8_t* basic)
+    void set(const uint8_t* basic) override
     {
         romBank<0x2000>::set(basic);
 
