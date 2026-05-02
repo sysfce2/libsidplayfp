@@ -1,6 +1,6 @@
 m4_define([lib_major], [3])
 m4_define([lib_minor], [0])
-m4_define([lib_level], [0b1])
+m4_define([lib_level], [0])
 m4_define([lib_version], [lib_major.lib_minor.lib_level])
 
 AC_PREREQ([2.62])
@@ -114,7 +114,7 @@ LIBSIDPLAYAGE=7
 LIBSIDPLAYVERSION=$LIBSIDPLAYCUR:$LIBSIDPLAYREV:$LIBSIDPLAYAGE
 
 LIBSTILVIEWCUR=0
-LIBSTILVIEWREV=7
+LIBSTILVIEWREV=8
 LIBSTILVIEWAGE=0
 LIBSTILVIEWVERSION=$LIBSTILVIEWCUR:$LIBSTILVIEWREV:$LIBSTILVIEWAGE
 
